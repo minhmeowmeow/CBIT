@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết tài liệu - DCC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col">
+          <!-- Top Row: Logo left, contact/search/English right -->
+          <div class="flex items-center justify-between pt-3 pb-1">
+            <div class="w-28 h-28 flex-shrink-0">
+              <img src="../assets/index assests/LOGO.png" alt="DCC" class="w-full h-full object-contain">
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-search text-gray-500 cursor-pointer"></i>
+              <a href="contact1.html" class="text-sm text-blue-600 hover:underline">Liên hệ</a>
+              <span class="text-sm text-blue-600">English</span>
+            </div>
+          </div>
+          <!-- Navbar Row (Vietnamese) -->
+          <div class="flex justify-end items-center py-2">
+            <nav class="flex space-x-6">
+              <a href="index.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium flex items-center"><i class="fas fa-home mr-1"></i>TRANG CHỦ</a>
+              <a href="about.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">GIỚI THIỆU</a>
+              <a href="news.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">TIN TỨC</a>
+              <a href="activities.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">HOẠT ĐỘNG</a>
+              <a href="documents.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">VĂN BẢN</a>
+              <a href="documents-library.html" class="text-blue-600 text-sm font-medium border-b-2 border-blue-600 pb-1">TÀI LIỆU</a>
+              <a href="video-library.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">THƯ VIỆN</a>
+              <a href="#" class="text-gray-700 hover:text-blue-600 text-sm font-medium">SỰ KIỆN</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-2">
+            <nav class="text-sm text-gray-600">
+                <a href="index.html" class="hover:text-blue-600">Trang chủ</a>
+                <span class="mx-2">/</span>
+                <a href="documents-library.html" class="hover:text-blue-600">Tài liệu</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Document Details -->
+                <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+                    <h1 class="text-2xl font-bold text-gray-900 mb-6">
+                        Quy định chi tiết thi hành Luật Bảo vệ môi trường về ứng phó với biến đổi khí hậu
+                    </h1>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="space-y-4">
+                            <div>
+                                <span class="font-semibold text-gray-700">Ngày xuất bản:</span>
+                                <span class="ml-2">01/2022/TT-BTNMT/QĐ-ĐBKH</span>
+                            </div>
+                            <div>
+                                <span class="font-semibold text-gray-700">Loại tài liệu:</span>
+                                <span class="ml-2">Văn bản</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <span class="font-semibold text-gray-700">Tác giả:</span>
+                                <span class="ml-2">Lê Công Thành</span>
+                            </div>
+                            <div>
+                                <span class="font-semibold text-gray-700">Tải xuống:</span>
+                                <button class="ml-2 text-blue-600 hover:text-blue-800" onclick="downloadDocument()">
+                                    <i class="fas fa-download mr-1"></i>
+                                    Tải xuống
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Content -->
+                    <div class="border-t pt-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Nội dung</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Quy định chi tiết thi hành Luật Bảo vệ môi trường về ứng phó với biến đổi khí hậu
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Related Documents -->
+                <div class="bg-white rounded-lg shadow-sm p-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Tài liệu khác</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Related Document 1 -->
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="openRelatedDocument('related1')">
+                            <h4 class="font-medium text-blue-600 hover:underline mb-2">
+                                Quy định chi tiết thi hành Luật Bảo vệ môi trường
+                            </h4>
+                            <div class="text-sm text-gray-500 mb-2">May 24, 2021</div>
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <i class="fas fa-download mr-1"></i>
+                                <span>Tải xuống</span>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                Về việc ban hành hệ thống giám sát và đánh giá hoạt động thích ứng với biến đổi khí hậu cấp quốc gia
+                            </p>
+                        </div>
+
+                        <!-- Related Document 2 -->
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="openRelatedDocument('related2')">
+                            <h4 class="font-medium text-blue-600 hover:underline mb-2">
+                                Về việc ban hành hệ thống giám sát và đánh giá
+                            </h4>
+                            <div class="text-sm text-gray-500 mb-2">May 24, 2021</div>
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <i class="fas fa-download mr-1"></i>
+                                <span>Tải xuống</span>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                Về việc ban hành hệ thống giám sát và đánh giá hoạt động thích ứng với biến đổi khí hậu cấp quốc gia
+                            </p>
+                        </div>
+
+                        <!-- Related Document 3 -->
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="openRelatedDocument('related3')">
+                            <h4 class="font-medium text-blue-600 hover:underline mb-2">
+                                Chiến lược quốc gia về biến đổi khí hậu
+                            </h4>
+                            <div class="text-sm text-gray-500 mb-2">May 24, 2021</div>
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <i class="fas fa-download mr-1"></i>
+                                <span>Tải xuống</span>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                Về việc ban hành hệ thống giám sát và đánh giá hoạt động thích ứng với biến đổi khí hậu cấp quốc gia
+                            </p>
+                        </div>
+
+                        <!-- Related Document 4 -->
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="openRelatedDocument('related4')">
+                            <h4 class="font-medium text-blue-600 hover:underline mb-2">
+                                Về việc ban hành hệ thống giám sát và đánh giá
+                            </h4>
+                            <div class="text-sm text-gray-500 mb-2">May 24, 2021</div>
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <i class="fas fa-download mr-1"></i>
+                                <span>Tải xuống</span>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                Về việc ban hành hệ thống giám sát và đánh giá hoạt động thích ứng với biến đổi khí hậu cấp quốc gia
+                            </p>
+                        </div>
+
+                        <!-- Related Document 5 -->
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="openRelatedDocument('related5')">
+                            <h4 class="font-medium text-blue-600 hover:underline mb-2">
+                                Chiến lược quốc gia về biến đổi khí hậu
+                            </h4>
+                            <div class="text-sm text-gray-500 mb-2">May 24, 2021</div>
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <i class="fas fa-download mr-1"></i>
+                                <span>Tải xuống</span>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                Về việc ban hành hệ thống giám sát và đánh giá hoạt động thích ứng với biến đổi khí hậu cấp quốc gia
+                            </p>
+                        </div>
+
+                        <!-- Related Document 6 -->
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="openRelatedDocument('related6')">
+                            <h4 class="font-medium text-blue-600 hover:underline mb-2">
+                                Về việc ban hành hệ thống giám sát và đánh giá
+                            </h4>
+                            <div class="text-sm text-gray-500 mb-2">May 24, 2021</div>
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <i class="fas fa-download mr-1"></i>
+                                <span>Tải xuống</span>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                Về việc ban hành hệ thống giám sát và đánh giá hoạt động thích ứng với biến đổi khí hậu cấp quốc gia
+                            </p>
+                        </div>
+
+                        <!-- Related Document 7 -->
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="openRelatedDocument('related7')">
+                            <h4 class="font-medium text-blue-600 hover:underline mb-2">
+                                Chiến lược quốc gia về biến đổi khí hậu
+                            </h4>
+                            <div class="text-sm text-gray-500 mb-2">May 24, 2021</div>
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <i class="fas fa-download mr-1"></i>
+                                <span>Tải xuống</span>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                Về việc ban hành hệ thống giám sát và đánh giá hoạt động thích ứng với biến đổi khí hậu cấp quốc gia
+                            </p>
+                        </div>
+
+                        <!-- Related Document 8 -->
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="openRelatedDocument('related8')">
+                            <h4 class="font-medium text-blue-600 hover:underline mb-2">
+                                Về việc ban hành hệ thống giám sát và đánh giá
+                            </h4>
+                            <div class="text-sm text-gray-500 mb-2">May 24, 2021</div>
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <i class="fas fa-download mr-1"></i>
+                                <span>Tải xuống</span>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                Về việc ban hành hệ thống giám sát và đánh giá hoạt động thích ứng với biến đổi khí hậu cấp quốc gia
+                            </p>
+                        </div>
+
+                        <!-- Related Document 9 -->
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer" onclick="openRelatedDocument('related9')">
+                            <h4 class="font-medium text-blue-600 hover:underline mb-2">
+                                Chiến lược quốc gia về biến đổi khí hậu
+                            </h4>
+                            <div class="text-sm text-gray-500 mb-2">May 24, 2021</div>
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <i class="fas fa-download mr-1"></i>
+                                <span>Tải xuống</span>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                Về việc ban hành hệ thống giám sát và đánh giá hoạt động thích ứng với biến đổi khí hậu cấp quốc gia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Tìm kiếm tài liệu</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Tìm kiếm tài liệu" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 flex items-center justify-center">
+                            <i class="fas fa-search mr-2"></i>
+                            Tìm kiếm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold mb-4">DCC</div>
+                    <h3 class="text-lg font-semibold mb-4">MINH BẠCH TĂNG CƯỜNG CỦA THỎA THUẬN PARIS VỀ BIẾN ĐỔI KHÍ HẬU</h3>
+                    <div class="space-y-2 text-sm">
+                        <p>Địa chỉ: Số 10, đường Tôn Thất Thuyết, quận Nam Từ Liêm, Thành phố Hà Nội</p>
+                        <p>Điện thoại: 024.37759430 - 024.37759431</p>
+                        <p>Email: info@dcc.gov.vn</p>
+                        <p>Website: www.dcc.gov.vn</p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <span class="text-sm font-medium">LIÊN KẾT:</span>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="space-y-2 text-sm">
+                        <div><a href="about.html" class="hover:underline">Giới thiệu</a></div>
+                        <div><a href="news.html" class="hover:underline">Tin tức</a></div>
+                        <div><a href="activities.html" class="hover:underline">Hoạt động</a></div>
+                        <div><a href="documents.html" class="hover:underline">Văn bản</a></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="space-y-2 text-sm">
+                        <div><a href="documents-library.html" class="hover:underline">Tài liệu</a></div>
+                        <div><a href="video-library.html" class="hover:underline">Thư viện</a></div>
+                        <div><a href="#" class="hover:underline">Sự kiện</a></div>
+                        <div><a href="#" class="hover:underline">Liên hệ</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center text-xs mt-8 pt-8 border-t border-blue-500 opacity-75">
+                © 2025 Bản quyền thuộc Cục Biến đổi khí hậu
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function downloadDocument() {
+            // In a real application, this would trigger file download
+            alert('Đang tải xuống tài liệu...');
+        }
+
+        function openRelatedDocument(docId) {
+            // Navigate to related document detail page
+            window.location.href = `document-library-detail.html?id=${docId}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get document ID from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const docId = urlParams.get('id');
+            
+            // Load document details based on ID (in a real app, this would fetch from API)
+            if (docId) {
+                console.log('Loading document:', docId);
+            }
+
+            // Related documents click handlers
+            document.querySelectorAll('.border.rounded-lg.p-4').forEach(item => {
+                item.addEventListener('click', function() {
+                    const title = this.querySelector('h4').textContent;
+                    console.log('Clicked on related document:', title);
+                });
+            });
+
+            // Search functionality in sidebar
+            document.querySelector('.bg-blue-600.text-white.px-4.py-2').addEventListener('click', function() {
+                // Implement search logic
+                console.log('Search clicked from sidebar');
+                window.location.href = 'documents-library.html';
+            });
+
+            // Hover effects for related documents
+            document.querySelectorAll('.hover\\:shadow-md').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thủ tướng Phạm Minh Chính phát biểu tại COP26 - DCC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col">
+                <!-- Top Row: Logo left, contact/search/English right -->
+                <div class="flex items-center justify-between pt-3 pb-1">
+                    <div class="w-28 h-28 flex-shrink-0">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\index assests\LOGO.png" alt="DCC" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-search text-gray-500 cursor-pointer"></i>
+                        <a href="contact1.html" class="text-sm text-blue-600 hover:underline">Liên hệ</a>
+                        <span class="text-sm text-blue-600">English</span>
+                    </div>
+                </div>
+                <!-- Navbar Row (Vietnamese) -->
+                <div class="flex justify-end items-center py-2">
+                    <nav class="flex space-x-6">
+                        <a href="index.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium flex items-center"><i class="fas fa-home mr-1"></i>TRANG CHỦ</a>
+                        <a href="about.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">GIỚI THIỆU</a>
+                        <a href="news.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">TIN TỨC</a>
+                        <a href="activities.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">HOẠT ĐỘNG</a>
+                        <a href="documents.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">TÀI LIỆU</a>
+                        <a href="video-library.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">THƯ VIỆN</a>
+                        <a href="events.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">SỰ KIỆN</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-2">
+            <nav class="text-sm text-gray-600">
+                <a href="index.html" class="hover:text-blue-600">Trang chủ</a>
+                <span class="mx-2">/</span>
+                <a href="video-library.html" class="hover:text-blue-600">Thư viện</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Thư viện Video</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Video Title -->
+        <h1 class="text-2xl font-bold text-gray-900 mb-2">
+            Thủ tướng Phạm Minh Chính phát biểu tại COP26
+        </h1>
+        <div class="text-sm text-gray-500 mb-6">21/11/2024 16:20</div>
+
+        <!-- Main Video Player -->
+        <div class="bg-black rounded-lg overflow-hidden mb-6">
+            <div class="relative">
+                <video 
+                    id="mainVideo"
+                    class="w-full h-64 md:h-96 lg:h-[500px]" 
+                    controls 
+                    poster="C:\Users\PC\Desktop\Cbit\assets\video library assets\image 212.png?height=500&width=900"
+                >
+                    <source src="#" type="video/mp4">
+                    <p class="text-white p-4">Trình duyệt của bạn không hỗ trợ video HTML5.</p>
+                </video>
+                
+                <!-- Video Overlay Info -->
+                <div class="absolute bottom-4 left-4 text-white">
+                    <div class="bg-black bg-opacity-75 px-3 py-2 rounded">
+                        <div class="text-sm font-medium">WORLD STAGE/ Thủ tướng Phạm Minh Chính phát biểu tại COP26</div>
+                        <div class="text-xs mt-1">The Prime Minister acknowledged Vietnam has a major part to play</div>
+                    </div>
+                </div>
+
+                <!-- Close button -->
+                <button class="absolute top-4 right-4 text-white hover:text-gray-300">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Social Sharing -->
+        <div class="flex items-center justify-end space-x-4 mb-8">
+            <span class="text-sm text-gray-600">Chia sẻ:</span>
+            <button class="text-blue-600 hover:text-blue-800" onclick="shareOnFacebook()">
+                <i class="fab fa-facebook-f text-lg"></i>
+            </button>
+            <button class="text-blue-400 hover:text-blue-600" onclick="shareOnTwitter()">
+                <i class="fab fa-twitter text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Related Videos Section -->
+        <div class="bg-gray-100 py-8 -mx-4 px-4">
+            <h3 class="text-xl font-bold text-blue-600 mb-6">CÁC VIDEO KHÁC</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Related Video 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer" onclick="playRelatedVideo('related1')">
+                    <div class="relative">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\video library assets\image 213.png?height=150&width=250" alt="Video thumbnail" class="w-full h-36 object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-black bg-opacity-50 rounded-full p-2">
+                                <i class="fas fa-play text-white text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-medium text-gray-900 text-sm mb-1">
+                            Triển khai thực hiện Thỏa thuận Paris về biến đổi khí hậu tại các tỉnh miền Trung - Tây Nguyên
+                        </h4>
+                    </div>
+                </div>
+
+                <!-- Related Video 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer" onclick="playRelatedVideo('related2')">
+                    <div class="relative">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\video library assets\image 214.png?height=150&width=250" alt="Video thumbnail" class="w-full h-36 object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-black bg-opacity-50 rounded-full p-2">
+                                <i class="fas fa-play text-white text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded">
+                            PRESIDENT
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-medium text-gray-900 text-sm mb-1">
+                            Thông qua thỏa thuận Paris về Biến đổi khí hậu
+                        </h4>
+                    </div>
+                </div>
+
+                <!-- Related Video 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer" onclick="playRelatedVideo('related3')">
+                    <div class="relative">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\video library assets\image 215.png?height=150&width=250" alt="Video thumbnail" class="w-full h-36 object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-black bg-opacity-50 rounded-full p-2">
+                                <i class="fas fa-play text-white text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-medium text-gray-900 text-sm mb-1">
+                            COP26 Có hội cuối cùng
+                        </h4>
+                    </div>
+                </div>
+
+                <!-- Related Video 4 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer" onclick="playRelatedVideo('related4')">
+                    <div class="relative">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\video library assets\image 221.png?height=150&width=250" alt="Video thumbnail" class="w-full h-36 object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-black bg-opacity-50 rounded-full p-2">
+                                <i class="fas fa-play text-white text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-medium text-gray-900 text-sm mb-1">
+                            Triển khai thực hiện Thỏa thuận Paris về biến đổi khí hậu tại các tỉnh miền Trung - Tây Nguyên
+                        </h4>
+                    </div>
+                </div>
+
+                <!-- Related Video 5 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer" onclick="playRelatedVideo('related5')">
+                    <div class="relative">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\video library assets\image 221.png?height=150&width=250" alt="Video thumbnail" class="w-full h-36 object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-black bg-opacity-50 rounded-full p-2">
+                                <i class="fas fa-play text-white text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded">
+                            PRESIDENT
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-medium text-gray-900 text-sm mb-1">
+                            Thông qua thỏa thuận Paris về Biến đổi khí hậu
+                        </h4>
+                    </div>
+                </div>
+
+                <!-- Related Video 6 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer" onclick="playRelatedVideo('related6')">
+                    <div class="relative">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\video library assets\image 214.png?height=150&width=250" alt="Video thumbnail" class="w-full h-36 object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-black bg-opacity-50 rounded-full p-2">
+                                <i class="fas fa-play text-white text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-medium text-gray-900 text-sm mb-1">
+                            COP26 Có hội cuối cùng
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Footer -->
+<footer class="bg-[#2086d7] text-white pt-6 pb-2">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <!-- Logo lớn bên trái -->
+        <div class="flex flex-col items-center md:items-start">
+          <img src="C:\Users\PC\Desktop\Cbit\assets\index assests\Logo White.png" alt="DCC" class="w-40 h-40 object-contain mb-2" />
+        </div>
+        <!-- Thông tin liên hệ ở giữa -->
+        <div class="flex flex-col items-center md:items-start">
+          <h2 class="font-bold text-base md:text-lg mb-2 text-center md:text-left">MINH BẠCH TĂNG CƯỜNG CỦA THỎA THUẬN PARIS VỀ BIẾN ĐỔI KHÍ HẬU</h2>
+          <p class="text-xs md:text-sm">Địa chỉ: Số 10, đường Tôn Thất Thuyết, quận Nam Từ Liêm, Thành phố Hà Nội</p>
+          <p class="text-xs md:text-sm">Điện thoại: 024 37759430 - 024 37759431</p>
+          <p class="text-xs md:text-sm">Email: Info@dcc.gov.vn</p>
+          <p class="text-xs md:text-sm">Website: www.dcc.gov.vn</p>
+          <div class="flex items-center mt-3">
+            <span class="font-semibold mr-2">LIÊN KẾT:</span>
+            <a href="#" class="mx-1"><img src="C:\Users\PC\Desktop\Cbit\assets\index assests\Group 491.png" alt="Facebook" class="w-8 h-8 inline-block" /></a>
+            <a href="#" class="mx-1"><img src="C:\Users\PC\Desktop\Cbit\assets\index assests\youtube 4.png" alt="YouTube" class="w-8 h-8 inline-block" /></a>
+          </div>
+        </div>
+        <!-- Menu liên kết bên phải -->
+        <div class="grid grid-cols-2 gap-4 w-full md:w-auto mt-6 md:mt-0">
+          <div class="space-y-1">
+            <a href="about.html" class="block text-sm hover:underline">Giới thiệu</a>
+            <a href="news.html" class="block text-sm hover:underline">Tin tức</a>
+            <a href="activities.html" class="block text-sm hover:underline">Hoạt động</a>
+            <a href="documents.html" class="block text-sm hover:underline">Văn bản</a>
+          </div>
+          <div class="space-y-1">
+            <a href="documents.html" class="block text-sm hover:underline">Tài liệu</a>
+            <a href="video-library.html" class="block text-sm hover:underline">Thư viện</a>
+            <a href="events.html" class="block text-sm hover:underline">Sự kiện</a>
+            <a href="contact.html" class="block text-sm hover:underline">Liên hệ</a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 border-blue-300 opacity-60" />
+      <div class="text-center text-xs opacity-90 pb-2">© 2025 Bản quyền thuộc Cục Biến đổi khí hậu</div>
+    </div>
+  </footer>
+  
+
+    <!-- JavaScript -->
+    <script>
+        function playRelatedVideo(videoId) {
+            // Navigate to related video detail page
+            window.location.href = `video-detail.html?id=${videoId}`;
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('Thủ tướng Phạm Minh Chính phát biểu tại COP26');
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
+        }
+
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Thủ tướng Phạm Minh Chính phát biểu tại COP26');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get video ID from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoId = urlParams.get('id');
+            
+            if (videoId) {
+                console.log('Loading video:', videoId);
+                // In a real application, load specific video content based on ID
+            }
+
+            // Video player functionality
+            const mainVideo = document.getElementById('mainVideo');
+            if (mainVideo) {
+                mainVideo.addEventListener('loadstart', function() {
+                    console.log('Video loading started');
+                });
+                
+                mainVideo.addEventListener('error', function() {
+                    console.log('Video loading error - showing placeholder');
+                });
+
+                // Auto-play functionality (if needed)
+                mainVideo.addEventListener('canplay', function() {
+                    console.log('Video can start playing');
+                });
+            }
+
+            // Related video hover effects
+            document.querySelectorAll('.cursor-pointer').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Close button functionality
+            document.querySelector('.fa-times').addEventListener('click', function() {
+                window.location.href = 'video-library.html';
+            });
+
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    window.location.href = 'video-library.html';
+                }
+                
+                if (e.key === ' ' && mainVideo) {
+                    e.preventDefault();
+                    if (mainVideo.paused) {
+                        mainVideo.play();
+                    } else {
+                        mainVideo.pause();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

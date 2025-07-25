@@ -18,9 +18,30 @@
               <img src="../assets/index assests/LOGO.png" alt="DCC" class="w-full h-full object-contain">
             </div>
             <div class="flex items-center space-x-4">
-              <i class="fas fa-search text-gray-500 cursor-pointer"></i>
-              <a href="contact1.html" class="text-sm text-blue-600 hover:underline">Liên hệ</a>
-              <span class="text-sm text-blue-600">English</span>
+                <i class="fas fa-search text-gray-500 cursor-pointer" id="globalSearchBtn"></i>
+                <div id="search-bar-wrapper" class="hidden mt-2">
+                    <div class="search-bar-component flex bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm items-center">
+                        <div class="relative">
+                            <select class="appearance-none bg-white border-r border-gray-300 px-4 py-3 pr-8 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer">
+                                <option value="">Danh mục</option>
+                                <option value="tin-tuc">Tin tức</option>
+                                <option value="hoat-dong">Hoạt động</option>
+                                <option value="van-ban">Văn bản</option>
+                                <option value="tai-lieu">Tài liệu</option>
+                                <option value="su-kien">Sự kiện</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="Tìm kiếm" class="flex-1 px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                        <button class="bg-blue-500 hover:bg-blue-600 px-4 py-3 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <a href="contact1.html" class="text-sm text-blue-600 hover:underline">Liên hệ</a>
+                <span class="text-sm text-blue-600">English</span>
             </div>
           </div>
           <!-- Navbar Row (Vietnamese) -->
@@ -365,5 +386,6 @@
             });
         });
     </script>
+    <script src="../js/search-bar.js"></script>
 </body>
 </html>

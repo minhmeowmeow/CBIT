@@ -1,0 +1,11 @@
+/* Main input file - Import Tailwind và custom styles */
+
+/* Tailwind CSS Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import custom styles */
+@import './base.css';
+@import './components.css';
+@import './utilities.css';

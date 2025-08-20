@@ -1,0 +1,306 @@
+/* CSS riêng cho trang Contact (contact.html) */
+
+/* Tailwind CSS Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import CSS chung cho header, footer, navbar */
+@import '../components.css';
+
+/* ===== HEADER & NAVBAR (GIỐNG NHAU 100%) ===== */
+
+/* Site Header */
+.site-header {
+    @apply bg-white shadow-sm sticky top-0 z-50;
+}
+
+.header-container {
+    @apply max-w-7xl mx-auto px-4;
+}
+
+.header-content {
+    @apply flex flex-col;
+}
+
+/* Header Top Row */
+.header-top-row {
+    @apply flex items-center justify-between pt-3 pb-1;
+}
+
+.logo-container {
+    @apply w-28 h-28 flex-shrink-0;
+}
+
+.logo-image {
+    @apply w-full h-full object-contain;
+}
+
+/* Header Actions */
+.header-actions {
+    @apply flex items-center space-x-4;
+}
+
+.search-icon {
+    @apply text-gray-500 cursor-pointer hover:text-blue-600 transition-colors;
+}
+
+.search-wrapper {
+    @apply hidden mt-2;
+}
+
+.search-wrapper.active {
+    @apply block;
+}
+
+.search-bar-component {
+    @apply flex bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm items-center;
+}
+
+.search-select-container {
+    @apply relative;
+}
+
+.search-select {
+    @apply appearance-none bg-white border-r border-gray-300 px-4 py-3 pr-8 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer;
+}
+
+.select-arrow {
+    @apply absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none;
+}
+
+.select-arrow i {
+    @apply text-gray-400 text-xs;
+}
+
+.search-input {
+    @apply flex-1 px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.search-button {
+    @apply bg-blue-500 hover:bg-blue-600 px-4 py-3 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.contact-link {
+    @apply text-sm text-blue-600 hover:underline transition-colors;
+}
+
+.language-link {
+    @apply text-sm text-blue-600 cursor-pointer hover:underline transition-colors;
+}
+
+/* Navigation Bar */
+.navbar-row {
+    @apply flex justify-end items-center py-2;
+}
+
+.main-nav {
+    @apply flex space-x-6;
+}
+
+.nav-link {
+    @apply text-gray-700 hover:text-blue-600 text-sm font-medium transition-colors duration-200;
+}
+
+.nav-link.active {
+    @apply text-blue-600 border-b-2 border-blue-600;
+}
+
+.nav-link.home {
+    @apply flex items-center;
+}
+
+.nav-icon {
+    @apply mr-1;
+}
+
+/* ===== FOOTER (GIỐNG NHAU 100%) ===== */
+
+/* Site Footer */
+.site-footer {
+    @apply bg-[#2086d7] text-white pt-6 pb-2;
+}
+
+.footer-container {
+    @apply max-w-7xl mx-auto px-4;
+}
+
+.footer-content {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 items-start;
+}
+
+/* Footer Logo Section */
+.footer-logo-section {
+    @apply flex flex-col items-center md:items-start;
+}
+
+.footer-logo {
+    @apply w-40 h-40 object-contain mb-2;
+}
+
+/* Footer Info Section */
+.footer-info-section {
+    @apply flex flex-col items-center md:items-start;
+}
+
+.footer-title {
+    @apply font-bold text-base md:text-lg mb-2 text-center md:text-left;
+}
+
+.footer-address,
+.footer-contact {
+    @apply text-xs md:text-sm mb-1;
+}
+
+.footer-social {
+    @apply flex items-center mt-3;
+}
+
+.social-label {
+    @apply font-semibold mr-2;
+}
+
+.social-link {
+    @apply mx-1 hover:opacity-80 transition-opacity;
+}
+
+.social-icon {
+    @apply w-8 h-8 inline-block;
+}
+
+/* Footer Links Section */
+.footer-links-section {
+    @apply grid grid-cols-2 gap-4 w-full md:w-auto mt-6 md:mt-0;
+}
+
+.footer-links-column {
+    @apply space-y-1;
+}
+
+.footer-link {
+    @apply block text-sm hover:underline transition-colors;
+}
+
+.footer-divider {
+    @apply my-4 border-blue-300 opacity-60;
+}
+
+.footer-copyright {
+    @apply text-center text-xs opacity-90 pb-2;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .header-top-row {
+        @apply flex-col space-y-2;
+    }
+    
+    .header-actions {
+        @apply w-full justify-center;
+    }
+    
+    .main-nav {
+        @apply flex-wrap justify-center;
+    }
+    
+    .nav-link {
+        @apply text-xs;
+    }
+    
+    .footer-content {
+        @apply grid-cols-1 text-center;
+    }
+    
+    .footer-logo-section,
+    .footer-info-section {
+        @apply items-center;
+    }
+    
+    .footer-title {
+        @apply text-center;
+    }
+}
+
+/* Tablet Navigation */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-top-row {
+        @apply flex-row;
+    }
+    
+    .main-nav {
+        @apply space-x-4;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* Header animations */
+.header-slide-down {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Navigation hover effects */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Search bar animations */
+.search-wrapper {
+    transition: all 0.3s ease;
+}
+
+.search-wrapper.active {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== CUSTOM STYLES CHO TRANG CONTACT ===== */
+
+.contact-page {
+    background-color: #f9fafb;
+    min-height: 100vh;
+}
+
+/* Thêm custom styles đặc biệt cho trang Contact ở đây */

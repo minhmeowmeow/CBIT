@@ -1,0 +1,36 @@
+{
+  "name": "cbitv4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./CBIT/styles/input.css -o ./CBIT/styles/output.css --watch",
+    "build:prod": "npx tailwindcss -i ./CBIT/styles/input.css -o ./CBIT/styles/output.css --minify",
+    "build:pages": "npm run build:index && npm run build:about && npm run build:news && npm run build:contact && npm run build:contact1 && npm run build:activities && npm run build:documents && npm run build:events && npm run build:document-library && npm run build:document-detail && npm run build:document-library-detail && npm run build:event-detail && npm run build:news-detail && npm run build:photo-album-detail && npm run build:video-detail && npm run build:video-library",
+    "build:index": "npx tailwindcss -i ./CBIT/styles/pages/index.css -o ./CBIT/styles/dist/index.min.css --minify",
+    "build:about": "npx tailwindcss -i ./CBIT/styles/pages/about.css -o ./CBIT/styles/dist/about.min.css --minify",
+    "build:news": "npx tailwindcss -i ./CBIT/styles/pages/news.css -o ./CBIT/styles/dist/news.min.css --minify",
+    "build:contact": "npx tailwindcss -i ./CBIT/styles/pages/contact.css -o ./CBIT/styles/dist/contact.min.css --minify",
+    "build:contact1": "npx tailwindcss -i ./CBIT/styles/pages/contact1.css -o ./CBIT/styles/dist/contact1.min.css --minify",
+    "build:activities": "npx tailwindcss -i ./CBIT/styles/pages/activities.css -o ./CBIT/styles/dist/activities.min.css --minify",
+    "build:documents": "npx tailwindcss -i ./CBIT/styles/pages/documents.css -o ./CBIT/styles/dist/documents.min.css --minify",
+    "build:events": "npx tailwindcss -i ./CBIT/styles/pages/events.css -o ./CBIT/styles/dist/events.min.css --minify",
+    "build:document-library": "npx tailwindcss -i ./CBIT/styles/pages/document-library.css -o ./CBIT/styles/dist/document-library.min.css --minify",
+    "build:document-detail": "npx tailwindcss -i ./CBIT/styles/pages/document-detail.css -o ./CBIT/styles/dist/document-detail.min.css --minify",
+    "build:document-library-detail": "npx tailwindcss -i ./CBIT/styles/pages/document-library-detail.css -o ./CBIT/styles/dist/document-library-detail.min.css --minify",
+    "build:event-detail": "npx tailwindcss -i ./CBIT/styles/pages/event-detail.css -o ./CBIT/styles/dist/event-detail.min.css --minify",
+    "build:news-detail": "npx tailwindcss -i ./CBIT/styles/pages/news-detail.css -o ./CBIT/styles/dist/news-detail.min.css --minify",
+    "build:photo-album-detail": "npx tailwindcss -i ./CBIT/styles/pages/photo-album-detail.css -o ./CBIT/styles/dist/photo-album-detail.min.css --minify",
+    "build:video-detail": "npx tailwindcss -i ./CBIT/styles/pages/video-detail.css -o ./CBIT/styles/dist/video-detail.min.css --minify",
+    "build:video-library": "npx tailwindcss -i ./CBIT/styles/pages/video-library.css -o ./CBIT/styles/dist/video-library.min.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  }
+}

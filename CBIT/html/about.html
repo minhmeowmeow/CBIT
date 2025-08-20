@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - DCC</title>
+    <link rel="stylesheet" href="../styles/dist/about.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-white">
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col">
+          <!-- Top Row: Logo left, contact/search/English right -->
+          <div class="flex items-center justify-between pt-3 pb-1">
+            <div class="w-28 h-28 flex-shrink-0">
+              <img src="../assets/index assests/LOGO.png" alt="DCC" class="w-full h-full object-contain">
+            </div>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-search text-gray-500 cursor-pointer" id="globalSearchBtn"></i>
+                <div id="search-bar-wrapper" class="hidden mt-2">
+                    <div class="search-bar-component flex bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm items-center">
+                        <div class="relative">
+                            <select class="appearance-none bg-white border-r border-gray-300 px-4 py-3 pr-8 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer">
+                                <option value="">Danh mục</option>
+                                <option value="tin-tuc">Tin tức</option>
+                                <option value="hoat-dong">Hoạt động</option>
+                                <option value="van-ban">Văn bản</option>
+                                <option value="tai-lieu">Tài liệu</option>
+                                <option value="su-kien">Sự kiện</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="Tìm kiếm" class="flex-1 px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                        <button class="bg-blue-500 hover:bg-blue-600 px-4 py-3 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <a href="contact1.html" class="text-sm text-blue-600 hover:underline">Liên hệ</a>
+                <span class="text-sm text-blue-600">English</span>
+            </div>
+          </div>
+          <!-- Navbar Row (Vietnamese) -->
+          <div class="flex justify-end items-center py-2">
+            <nav class="flex space-x-6">
+              <a href="index.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium flex items-center"><i class="fas fa-home mr-1"></i>TRANG CHỦ</a>
+              <a href="about.html" class="text-blue-600 text-sm font-medium border-b-2 border-blue-600">GIỚI THIỆU</a>
+              <a href="news.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">TIN TỨC</a>
+              <a href="activities.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">HOẠT ĐỘNG</a>
+              <a href="documents.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">TÀI LIỆU</a>
+              <a href="video-library.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">THƯ VIỆN</a>
+              <a href="events.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">SỰ KIỆN</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-80 w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] max-w-none mb-8 overflow-hidden" style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
+        <!-- Background glow/blur effect -->
+        <div class="absolute inset-0 z-0">
+            <img src="C:\Users\PC\Desktop\Cbit\assets\about assets\Mask group.png?height=400&width=2400" alt="Blur BG" class="w-full h-full object-cover scale-110 blur-2xl opacity-60 select-none pointer-events-none" />
+            <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-200 to-yellow-200 opacity-30 mix-blend-lighten"></div>
+        </div>
+        <!-- Main hero image -->
+        <img src="C:\Users\PC\Desktop\Cbit\assets\about assets\Mask group.png?height=400&width=2400" alt="Green landscape" class="relative w-full h-full object-cover z-10 scale-105 transition-transform duration-700 ease-in-out" />
+        <div class="absolute inset-0 bg-green-600 bg-opacity-20 z-20"></div>
+        <div class="absolute bottom-4 left-4 text-white z-30">
+            <nav class="text-sm drop-shadow-lg">
+                <a href="index.html" class="hover:underline">Trang chủ</a>
+                <span class="mx-2">/</span>
+                <span>Giới thiệu</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Main Content Card Section -->
+        <div class="mb-16 mt-8">
+            <div class="flex flex-col lg:flex-row overflow-hidden shadow-xl bg-white h-[420px] w-full">
+                <!-- Left: Full height image, no border radius -->
+                <div class="w-full lg:w-1/2 h-full flex-shrink-0">
+                    <img src="C:\Users\PC\Desktop\Cbit\assets\about assets\image 172.png?height=400&width=500" alt="Adult hands passing Earth globe to child" class="w-full h-full object-cover">
+                </div>
+                <!-- Right: Blue box, no border radius, smaller text -->
+                <div class="flex-1 flex flex-col justify-center px-8 py-8 bg-blue-600 text-white h-full">
+                    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight drop-shadow-lg">
+                        Khung minh bạch tăng cường của Thỏa thuận Paris về biến đổi khí hậu Thông tin về Dự án CBIT
+                    </h1>
+                    <p class="text-sm md:text-base leading-relaxed opacity-95">
+                        Việc triển khai chống biến đổi khí hậu trên toàn cầu là việc vô cùng cần thiết và cấp bách. Khi các quốc gia tham gia vào thỏa thuận chung về việc chống biến đổi khí hậu thì khung minh bạch trong thỏa thuận là rất quan trọng. Đó là cơ sở kiểm tra, đánh giá trong quá trình cam kết thực hiện. Nó đề cập đến việc đo lường đáng tin cậy, báo cáo để tiếp cận và đánh giá của chuyên gia về tiến độ mà các quốc gia đã đạt được trong việc đạt được các mục tiêu về cam kết về khí hậu quốc gia của họ.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Content Section -->
+        <div class="space-y-6 text-gray-700 leading-relaxed">
+            <div>
+                <strong class="text-gray-900">Mục tiêu chính:</strong> Mục tiêu của tổ chức Thỏa thuận Paris là giảm phát thải khí nhà kính để giữ cho nhiệt độ trái đất tăng không quá 2°C so với mức tiền công nghiệp, và cố gắng hạn chế mức nhiệt độ dưới 1.5°C nếu có thể.
+            </div>
+            
+            <div>
+                <strong class="text-gray-900">Cam kết của các quốc gia:</strong> Mỗi quốc gia tham gia Thỏa thuận Paris cần đề ra các cam kết cụ thể về việc giảm lượng phát thải khí nhà kính, đồng thời thúc đẩy năng lượng tái tạo và sử dụng các biện pháp ứng phó với biến đổi khí hậu.
+            </div>
+            
+            <div>
+                <strong class="text-gray-900">Minh bạch và đánh giá:</strong> Thỏa thuận Paris cũng yêu cầu các quốc gia báo cáo định kỳ về các biện pháp họ đang thực hiện để giảm phát thải và ứng phó với biến đổi khí hậu, đồng thời thực hiện các đánh giá về đóc lập về tiến độ của mình.
+            </div>
+            
+            <div>
+                <strong class="text-gray-900">Hỗ trợ tài chính:</strong> Thỏa thuận Paris cam kết cung cấp hỗ trợ tài chính cho các quốc gia phát triển để giảm phát thải và thích ứng với biến đổi khí hậu, đồng thời xây dựng khả năng chống chịu cho các cộng đồng dễ bị ảnh hưởng.
+            </div>
+            
+            <div>
+                <strong class="text-gray-900">Điều chỉnh và nâng cấp cam kết:</strong> Thỏa thuận Paris khuyến khích việc điều chỉnh và nâng cấp cam kết của các quốc gia theo thời gian, để đảm bảo rằng mỗi quốc gia đang hành động hiệu quả nhất để giảm phát thải.
+            </div>
+            
+            <div class="mt-8">
+                <p>Thỏa thuận Paris được coi là một bước quan trọng trong nỗ lực toàn cầu để giảm phát thải khí nhà kính và ứng phó với biến đổi khí hậu.</p>
+            </div>
+        </div>
+
+        <!-- Infographic Section -->
+        <div class="my-12 flex justify-center">
+            <div class="max-w-4xl">
+                <img src="C:\Users\PC\Desktop\Cbit\assets\about assets\image 335.png?height=400&width=800" alt="Climate infographic with world map" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#2086d7] text-white pt-6 pb-2">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div class="flex flex-col items-center md:items-start">
+              <img src="C:\Users\PC\Desktop\Cbit\assets\index assests\Logo White.png" alt="DCC" class="w-40 h-40 object-contain mb-2" />
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+              <h2 class="font-bold text-base md:text-lg mb-2 text-center md:text-left">MINH BẠCH TĂNG CƯỜNG CỦA THỎA THUẬN PARIS VỀ BIẾN ĐỔI KHÍ HẬU</h2>
+              <p class="text-xs md:text-sm">Địa chỉ: Số 10, đường Tôn Thất Thuyết, quận Nam Từ Liêm, Thành phố Hà Nội</p>
+              <p class="text-xs md:text-sm">Điện thoại: 024 37759430 - 024 37759431</p>
+              <p class="text-xs md:text-sm">Email: Info@dcc.gov.vn</p>
+              <p class="text-xs md:text-sm">Website: www.dcc.gov.vn</p>
+              <div class="flex items-center mt-3">
+                <span class="font-semibold mr-2">LIÊN KẾT:</span>
+                <a href="#" class="mx-1"><img src="C:\Users\PC\Desktop\Cbit\assets\index assests\Group 491.png" alt="Facebook" class="w-8 h-8 inline-block" /></a>
+                <a href="#" class="mx-1"><img src="C:\Users\PC\Desktop\Cbit\assets\index assests\youtube 4.png" alt="YouTube" class="w-8 h-8 inline-block" /></a>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 w-full md:w-auto mt-6 md:mt-0">
+              <div class="space-y-1">
+                <a href="about.html" class="block text-sm hover:underline">Giới thiệu</a>
+                <a href="news.html" class="block text-sm hover:underline">Tin tức</a>
+                <a href="activities.html" class="block text-sm hover:underline">Hoạt động</a>
+                <a href="documents.html" class="block text-sm hover:underline">Văn bản</a>
+              </div>
+              <div class="space-y-1">
+                <a href="documents.html" class="block text-sm hover:underline">Tài liệu</a>
+                <a href="video-library.html" class="block text-sm hover:underline">Thư viện</a>
+                <a href="events.html" class="block text-sm hover:underline">Sự kiện</a>
+                <a href="contact.html" class="block text-sm hover:underline">Liên hệ</a>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4 border-blue-300 opacity-60" />
+          <div class="text-center text-xs opacity-90 pb-2">© 2025 Bản quyền thuộc Cục Biến đổi khí hậu</div>
+        </div>
+      </footer>
+
+    <!-- JavaScript File -->
+    <script src="../js/about.js"></script>
+    <script src="../js/search-bar.js"></script>
+</body>
+</html>

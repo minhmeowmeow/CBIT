@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài liệu - DCC</title>
+    <link rel="stylesheet" href="../styles/dist/document-library.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col">
+          <!-- Top Row: Logo left, contact/search/English right -->
+          <div class="flex items-center justify-between pt-3 pb-1">
+            <div class="w-28 h-28 flex-shrink-0">
+              <img src="../assets/index assests/LOGO.png" alt="DCC" class="w-full h-full object-contain">
+            </div>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-search text-gray-500 cursor-pointer" id="globalSearchBtn"></i>
+                <div id="search-bar-wrapper" class="hidden mt-2">
+                    <div class="search-bar-component flex bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm items-center">
+                        <div class="relative">
+                            <select class="appearance-none bg-white border-r border-gray-300 px-4 py-3 pr-8 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer">
+                                <option value="">Danh mục</option>
+                                <option value="tin-tuc">Tin tức</option>
+                                <option value="hoat-dong">Hoạt động</option>
+                                <option value="van-ban">Văn bản</option>
+                                <option value="tai-lieu">Tài liệu</option>
+                                <option value="su-kien">Sự kiện</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="Tìm kiếm" class="flex-1 px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                        <button class="bg-blue-500 hover:bg-blue-600 px-4 py-3 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <a href="contact1.html" class="text-sm text-blue-600 hover:underline">Liên hệ</a>
+                <span class="text-sm text-blue-600">English</span>
+            </div>
+          </div>
+          <!-- Navbar Row (Vietnamese) -->
+          <div class="flex justify-end items-center py-2">
+            <nav class="flex space-x-6">
+              <a href="index.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium flex items-center"><i class="fas fa-home mr-1"></i>TRANG CHỦ</a>
+              <a href="about.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">GIỚI THIỆU</a>
+              <a href="news.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">TIN TỨC</a>
+              <a href="activities.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">HOẠT ĐỘNG</a>
+              <a href="documents.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">VĂN BẢN</a>
+              <a href="documents-library.html" class="text-blue-600 text-sm font-medium border-b-2 border-blue-600 pb-1">TÀI LIỆU</a>
+              <a href="video-library.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">THƯ VIỆN</a>
+              <a href="#" class="text-gray-700 hover:text-blue-600 text-sm font-medium">SỰ KIỆN</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-2">
+            <nav class="text-sm text-gray-600">
+                <a href="index.html" class="hover:text-blue-600">Trang chủ</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Tài liệu</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Page Title -->
+        <h1 class="text-2xl font-bold text-blue-600 mb-6">Tài liệu</h1>
+
+        <!-- Search Interface -->
+        <div class="bg-blue-100 rounded-lg p-6 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <input type="text" placeholder="Tìm kiếm tài liệu" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 flex items-center justify-center">
+                        <i class="fas fa-search mr-2"></i>
+                        Tìm kiếm
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documents Table -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <!-- Table Header -->
+            <div class="bg-blue-600 text-white">
+                <div class="grid grid-cols-12 gap-4 p-4 font-semibold text-sm">
+                    <div class="col-span-2">Ngày xuất bản</div>
+                    <div class="col-span-5">Tên tài liệu</div>
+                    <div class="col-span-2">Tác giả</div>
+                    <div class="col-span-1">Tình trạng</div>
+                    <div class="col-span-2">Xem / Tải về</div>
+                </div>
+            </div>
+
+            <!-- Table Body -->
+            <div class="divide-y divide-gray-200">
+                <!-- Document Row 1 -->
+                <div class="grid grid-cols-12 gap-4 p-4 hover:bg-gray-50 cursor-pointer" onclick="openDocument('doc1')">
+                    <div class="col-span-2 text-sm">10/04/2025</div>
+                    <div class="col-span-5 text-sm">
+                        <div class="font-medium text-blue-600 hover:underline">
+                            Phụ lục Tổ chức đã hoàn thành đăng ký sử dụng chất được kiểm soát theo quy định tại khoản 3 điều 24 nghị định số 06/2022/NĐ-CP (Đợt 11)
+                        </div>
+                    </div>
+                    <div class="col-span-2 text-sm">Cục Biến đổi khí hậu</div>
+                    <div class="col-span-1 text-sm">Bản gốc</div>
+                    <div class="col-span-2 text-sm flex items-center space-x-2">
+                        <span class="flex items-center">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">5</span>
+                            <i class="fas fa-eye text-green-600 ml-1"></i>
+                        </span>
+                        <span class="flex items-center">
+                            <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">4</span>
+                            <i class="fas fa-download text-blue-600 ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Document Row 2 -->
+                <div class="grid grid-cols-12 gap-4 p-4 hover:bg-gray-50 cursor-pointer" onclick="openDocument('doc2')">
+                    <div class="col-span-2 text-sm">03/12/2024</div>
+                    <div class="col-span-5 text-sm">
+                        <div class="font-medium text-blue-600 hover:underline">
+                            Nghiên cứu, xây dựng hệ số phát thải (EF) của lưới điện Việt Nam năm 2023
+                        </div>
+                    </div>
+                    <div class="col-span-2 text-sm">Cục Biến đổi khí hậu</div>
+                    <div class="col-span-1 text-sm">Bản gốc</div>
+                    <div class="col-span-2 text-sm flex items-center space-x-2">
+                        <span class="flex items-center">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">2</span>
+                            <i class="fas fa-eye text-green-600 ml-1"></i>
+                        </span>
+                        <span class="flex items-center">
+                            <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">2</span>
+                            <i class="fas fa-download text-blue-600 ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Document Row 3 -->
+                <div class="grid grid-cols-12 gap-4 p-4 hover:bg-gray-50 cursor-pointer" onclick="openDocument('doc3')">
+                    <div class="col-span-2 text-sm">30/10/2024</div>
+                    <div class="col-span-5 text-sm">
+                        <div class="font-medium text-blue-600 hover:underline">
+                            Quy chế báo cáo an toàn, an ninh thông tin mạng Cục Biến đổi khí hậu
+                        </div>
+                    </div>
+                    <div class="col-span-2 text-sm">Cục Biến đổi khí hậu</div>
+                    <div class="col-span-1 text-sm">Bản gốc</div>
+                    <div class="col-span-2 text-sm flex items-center space-x-2">
+                        <span class="flex items-center">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">10</span>
+                            <i class="fas fa-eye text-green-600 ml-1"></i>
+                        </span>
+                        <span class="flex items-center">
+                            <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">4</span>
+                            <i class="fas fa-download text-blue-600 ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Document Row 4 -->
+                <div class="grid grid-cols-12 gap-4 p-4 hover:bg-gray-50 cursor-pointer" onclick="openDocument('doc4')">
+                    <div class="col-span-2 text-sm">17/05/2024</div>
+                    <div class="col-span-5 text-sm">
+                        <div class="font-medium text-blue-600 hover:underline">
+                            Thông báo đợt 1 (tiếp) - Tổ chức hoàn thành đăng ký sử dụng chất được kiểm soát theo quy định tại Nghị định 06/NĐ-CP
+                        </div>
+                    </div>
+                    <div class="col-span-2 text-sm">Cục Biến đổi khí hậu</div>
+                    <div class="col-span-1 text-sm">Bản gốc</div>
+                    <div class="col-span-2 text-sm flex items-center space-x-2">
+                        <span class="flex items-center">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">5</span>
+                            <i class="fas fa-eye text-green-600 ml-1"></i>
+                        </span>
+                        <span class="flex items-center">
+                            <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">4</span>
+                            <i class="fas fa-download text-blue-600 ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Additional rows following the same pattern -->
+                <div class="grid grid-cols-12 gap-4 p-4 hover:bg-gray-50 cursor-pointer" onclick="openDocument('doc5')">
+                    <div class="col-span-2 text-sm">10/04/2025</div>
+                    <div class="col-span-5 text-sm">
+                        <div class="font-medium text-blue-600 hover:underline">
+                            Phụ lục Tổ chức đã hoàn thành đăng ký sử dụng chất được kiểm soát theo quy định tại khoản 3 điều 24 nghị định số 06/2022/NĐ-CP (Đợt 11)
+                        </div>
+                    </div>
+                    <div class="col-span-2 text-sm">Cục Biến đổi khí hậu</div>
+                    <div class="col-span-1 text-sm">Bản gốc</div>
+                    <div class="col-span-2 text-sm flex items-center space-x-2">
+                        <span class="flex items-center">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">5</span>
+                            <i class="fas fa-eye text-green-600 ml-1"></i>
+                        </span>
+                        <span class="flex items-center">
+                            <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">4</span>
+                            <i class="fas fa-download text-blue-600 ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- More document rows -->
+                <div class="grid grid-cols-12 gap-4 p-4 hover:bg-gray-50 cursor-pointer" onclick="openDocument('doc6')">
+                    <div class="col-span-2 text-sm">03/12/2024</div>
+                    <div class="col-span-5 text-sm">
+                        <div class="font-medium text-blue-600 hover:underline">
+                            Nghiên cứu, xây dựng hệ số phát thải (EF) của lưới điện Việt Nam năm 2023
+                        </div>
+                    </div>
+                    <div class="col-span-2 text-sm">Cục Biến đổi khí hậu</div>
+                    <div class="col-span-1 text-sm">Bản gốc</div>
+                    <div class="col-span-2 text-sm flex items-center space-x-2">
+                        <span class="flex items-center">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">2</span>
+                            <i class="fas fa-eye text-green-600 ml-1"></i>
+                        </span>
+                        <span class="flex items-center">
+                            <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">2</span>
+                            <i class="fas fa-download text-blue-600 ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12 gap-4 p-4 hover:bg-gray-50 cursor-pointer" onclick="openDocument('doc7')">
+                    <div class="col-span-2 text-sm">30/10/2024</div>
+                    <div class="col-span-5 text-sm">
+                        <div class="font-medium text-blue-600 hover:underline">
+                            Quy chế báo cáo an toàn, an ninh thông tin mạng Cục Biến đổi khí hậu
+                        </div>
+                    </div>
+                    <div class="col-span-2 text-sm">Cục Biến đổi khí hậu</div>
+                    <div class="col-span-1 text-sm">Bản sao</div>
+                    <div class="col-span-2 text-sm flex items-center space-x-2">
+                        <span class="flex items-center">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">10</span>
+                            <i class="fas fa-eye text-green-600 ml-1"></i>
+                        </span>
+                        <span class="flex items-center">
+                            <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">4</span>
+                            <i class="fas fa-download text-blue-600 ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12 gap-4 p-4 hover:bg-gray-50 cursor-pointer" onclick="openDocument('doc8')">
+                    <div class="col-span-2 text-sm">17/05/2024</div>
+                    <div class="col-span-5 text-sm">
+                        <div class="font-medium text-blue-600 hover:underline">
+                            Thông báo đợt 1 (tiếp) - Tổ chức hoàn thành đăng ký sử dụng chất được kiểm soát theo quy định tại Nghị định 06/NĐ-CP
+                        </div>
+                    </div>
+                    <div class="col-span-2 text-sm">Cục Biến đổi khí hậu</div>
+                    <div class="col-span-1 text-sm">Bản sao</div>
+                    <div class="col-span-2 text-sm flex items-center space-x-2">
+                        <span class="flex items-center">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">5</span>
+                            <i class="fas fa-eye text-green-600 ml-1"></i>
+                        </span>
+                        <span class="flex items-center">
+                            <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">4</span>
+                            <i class="fas fa-download text-blue-600 ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-8">
+            <nav class="flex items-center space-x-2">
+                <button class="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md">1</button>
+                <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">2</button>
+                <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">3</button>
+                <span class="px-3 py-2 text-sm font-medium text-gray-500">...</span>
+                <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold mb-4">DCC</div>
+                    <h3 class="text-lg font-semibold mb-4">MINH BẠCH TĂNG CƯỜNG CỦA THỎA THUẬN PARIS VỀ BIẾN ĐỔI KHÍ HẬU</h3>
+                    <div class="space-y-2 text-sm">
+                        <p>Địa chỉ: Số 10, đường Tôn Thất Thuyết, quận Nam Từ Liêm, Thành phố Hà Nội</p>
+                        <p>Điện thoại: 024.37759430 - 024.37759431</p>
+                        <p>Email: info@dcc.gov.vn</p>
+                        <p>Website: www.dcc.gov.vn</p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <span class="text-sm font-medium">LIÊN KẾT:</span>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="space-y-2 text-sm">
+                        <div><a href="about.html" class="hover:underline">Giới thiệu</a></div>
+                        <div><a href="news.html" class="hover:underline">Tin tức</a></div>
+                        <div><a href="activities.html" class="hover:underline">Hoạt động</a></div>
+                        <div><a href="documents.html" class="hover:underline">Văn bản</a></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="space-y-2 text-sm">
+                        <div><a href="documents-library.html" class="hover:underline">Tài liệu</a></div>
+                        <div><a href="video-library.html" class="hover:underline">Thư viện</a></div>
+                        <div><a href="#" class="hover:underline">Sự kiện</a></div>
+                        <div><a href="#" class="hover:underline">Liên hệ</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center text-xs mt-8 pt-8 border-t border-blue-500 opacity-75">
+                © 2025 Bản quyền thuộc Cục Biến đổi khí hậu
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function openDocument(docId) {
+            // Navigate to document detail page
+            window.location.href = `document-library-detail.html?id=${docId}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchButton = document.querySelector('button[class*="bg-blue-600"]');
+            searchButton.addEventListener('click', function() {
+                // Implement search logic here
+                console.log('Search clicked');
+            });
+
+            // Pagination functionality
+            document.querySelectorAll('nav button').forEach(button => {
+                button.addEventListener('click', function() {
+                    if (!this.querySelector('i')) {
+                        // Remove active class from all buttons
+                        document.querySelectorAll('nav button').forEach(btn => {
+                            btn.classList.remove('bg-blue-600', 'text-white');
+                            btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                        });
+                        
+                        // Add active class to clicked button
+                        this.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                        this.classList.add('bg-blue-600', 'text-white');
+                    }
+                });
+            });
+
+            // Hover effects for document rows
+            document.querySelectorAll('.grid.grid-cols-12.gap-4.p-4').forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(2px)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                
+                row.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+        });
+    </script>
+    <script src="../js/search-bar.js"></script>
+</body>
+</html>

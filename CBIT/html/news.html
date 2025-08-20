@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức - DCC</title>
+    <link rel="stylesheet" href="../styles/dist/news.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col">
+          <!-- Top Row: Logo left, contact/search/English right -->
+          <div class="flex items-center justify-between pt-3 pb-1">
+            <div class="w-28 h-28 flex-shrink-0">
+              <img src="C:\Users\PC\Desktop\Cbit\assets\index assests\LOGO.png" alt="DCC" class="w-full h-full object-contain">
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-search text-gray-500 cursor-pointer" id="globalSearchBtn"></i>
+              <div id="search-bar-wrapper" class="hidden mt-2">
+                  <div class="search-bar-component flex bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm items-center">
+                      <div class="relative">
+                          <select class="appearance-none bg-white border-r border-gray-300 px-4 py-3 pr-8 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent cursor-pointer">
+                              <option value="">Danh mục</option>
+                              <option value="tin-tuc">Tin tức</option>
+                              <option value="hoat-dong">Hoạt động</option>
+                              <option value="van-ban">Văn bản</option>
+                              <option value="tai-lieu">Tài liệu</option>
+                              <option value="su-kien">Sự kiện</option>
+                          </select>
+                          <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                              <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
+                          </div>
+                      </div>
+                      <input type="text" placeholder="Tìm kiếm" class="flex-1 px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                      <button class="bg-blue-500 hover:bg-blue-600 px-4 py-3 text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                          <i class="fas fa-search"></i>
+                      </button>
+                  </div>
+              </div>
+              <a href="contact1.html" class="text-sm text-blue-600 hover:underline">Liên hệ</a>
+              <span class="text-sm text-blue-600">English</span>
+            </div>
+          </div>
+          <!-- Navbar Row (Vietnamese) -->
+          <div class="flex justify-end items-center py-2">
+            <nav class="flex space-x-6">
+              <a href="index.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium flex items-center"><i class="fas fa-home mr-1"></i>TRANG CHỦ</a>
+              <a href="about.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">GIỚI THIỆU</a>
+              <a href="news.html" class="text-blue-600 text-sm font-medium border-b-2 border-blue-600">TIN TỨC</a>
+              <a href="activities.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">HOẠT ĐỘNG</a>
+              <a href="documents.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">TÀI LIỆU</a>
+              <a href="video-library.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">THƯ VIỆN</a>
+              <a href="events.html" class="text-gray-700 hover:text-blue-600 text-sm font-medium">SỰ KIỆN</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-2">
+            <nav class="text-sm text-gray-600">
+                <a href="index.html" class="hover:text-blue-600">Trang chủ</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Tin tức</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Featured News Article -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="relative">
+                    <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 172.png?height=300&width=500" alt="Conference meeting" class="w-full h-64 lg:h-full object-cover">
+                </div>
+                <div class="bg-blue-600 text-white p-8 flex flex-col justify-center">
+                    <h1 class="text-2xl font-bold mb-4">
+                        Thương mại sẽ thúc đẩy thích ứng biến đổi khí hậu hiệu quả hơn
+                    </h1>
+                    <div class="text-sm mb-4 opacity-90">09/04/2025</div>
+                    <p class="text-sm leading-relaxed">
+                        Ngày 9/4, tại Hà Nội đã diễn ra hội thảo "Chính sách thương mại trong hỗ trợ thích ứng với biến đổi khí hậu", nhằm thúc đẩy các nghiên cứu chuyên sâu liên quan đến vấn đề này trong năm 2025.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- News List Section -->
+        <div class="space-y-6">
+            <!-- News Item 1 -->
+            <a href="news-detail.html" class="block bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 174.png?height=150&width=200" alt="Climate change landscape" class="w-full h-32 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
+                            Kế hoạch quốc gia thích ứng với biến đổi khí hậu giai đoạn 2021 - 2030, tầm nhìn đến năm 2050 (cập nhật)
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-2">23/06/2025</div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Theo Thủ tướng Chính phủ Thái Hồng Vũ này sẽ quyết định số 1403/QĐ-TTg ngày 19/11/2024 về việc ban hành Kế hoạch quốc gia thích ứng với biến đổi khí hậu giai đoạn 2021 - 2030, tầm nhìn đến năm 2050.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- News Item 2 -->
+            <a href="news-detail.html" class="block bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 175.png?height=150&width=200" alt="Government official" class="w-full h-32 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
+                            Hoàn thiện chính sách pháp luật về giảm nhẹ phát thải khí nhà kính và bảo vệ tầng ô - đôn
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-2">23/06/2025</div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Ngày 22/6, tại Hà Nội, Phó Thủ tướng Chính phủ Trần Hồng Hà đã chủ trì cuộc họp toàn thể Ủy ban Quốc gia về Biến đổi khí hậu để xem xét các cuộc họp toàn thể cho Dự thảo Nghị định sửa đổi, bổ sung một số điều của Nghị định 06/2022/NĐ-CP ngày 07/01/2022 của Chính phủ quy định giảm nhẹ phát thải khí nhà kính và bảo vệ tầng ô - đôn.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- News Item 3 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 176.png?height=150&width=200" alt="Conference hall" class="w-full h-32 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
+                            Tiến độ đàm phán tuần thứ nhất tại Hội nghị SB62
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-2">23/06/2025</div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Trong các ngày từ 17 đến 21 tháng 6 năm 2025, Hội nghị đã tổ chức các Cuộc họp của các nhóm liên hệ của các Bên hỗ trợ SBI và SBSTA, tập trung vào thảo luận nhiều vấn đề trong đó có những vấn đề liên quan đến Việt Nam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 4 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 177.png?height=150&width=200" alt="COP29 meeting" class="w-full h-32 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
+                            Những kết quả tại Hội nghị COP29 về biến đổi khí hậu
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-2">23/06/2025</div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Sau 2 tuần làm việc chính thức, Hội nghị lần thứ 29 các bên tham gia Công ước khung của Liên hợp quốc về biến đổi khí hậu đã đạt được một số kết quả nhất định, bao gồm một thỏa thuận tài chính mới mang tính lịch sử để chính thức hỗ trợ những quốc gia đang phát triển trong việc carbon hóa nền kinh tế.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 5 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 178.png?height=150&width=200" alt="Vietnam delegation" class="w-full h-32 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
+                            Toàn văn phát biểu của Trưởng đoàn Việt Nam tại Hội nghị COP29 về biến đổi khí hậu
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-2">23/06/2025</div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Sáng ngày 20/11/2024 (giờ địa phương), Thứ trưởng Bộ Tài nguyên và Môi trường Lê Công Thành - Trưởng đoàn Việt Nam tại Hội nghị lần thứ 29 các Bên tham gia Công ước Khung của Liên hợp quốc về Biến đổi khí hậu (COP 29) đã có bài phát biểu quan trọng tại Phiên họp cấp cao.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 6 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 179.png?height=150&width=200" alt="Government official" class="w-full h-32 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
+                            Hoàn thiện chính sách pháp luật về giảm nhẹ phát thải khí nhà kính và bảo vệ tầng ô - đôn
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-2">23/06/2025</div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Ngày 22/6, tại Hà Nội, Phó Thủ tướng Chính phủ Trần Hồng Hà đã chủ trì cuộc họp toàn thể Ủy ban Quốc gia về Biến đổi khí hậu để xem xét các cuộc họp toàn thể cho Dự thảo Nghị định 06/2022/NĐ-CP ngày 07/01/2022 của Chính phủ quy định giảm nhẹ phát thải khí nhà kính và bảo vệ tầng ô - đôn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 7 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 180.png?height=150&width=200" alt="Conference hall" class="w-full h-32 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
+                            Tiến độ đàm phán tuần thứ nhất tại Hội nghị SB62
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-2">23/06/2025</div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Trong các ngày từ 17 đến 21 tháng 6 năm 2025, Hội nghị đã tổ chức các Cuộc họp của các nhóm liên hệ của các Bên hỗ trợ SBI và SBSTA, tập trung vào thảo luận nhiều vấn đề trong đó có những vấn đề liên quan đến Việt Nam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 8 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 181.png?height=150&width=200" alt="COP29 meeting" class="w-full h-32 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
+                            Những kết quả tại Hội nghị COP29 về biến đổi khí hậu
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-2">23/06/2025</div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Sau 2 tuần làm việc chính thức, Hội nghị lần thứ 29 các bên tham gia Công ước khung của Liên hợp quốc về biến đổi khí hậu đã đạt được một số kết quả nhất định, bao gồm một thỏa thuận tài chính mới mang tính lịch sử để chính thức hỗ trợ những quốc gia đang phát triển trong việc carbon hóa nền kinh tế.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Item 9 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="C:\Users\PC\Desktop\Cbit\assets\news assets\image 182.png?height=150&width=200" alt="Vietnam delegation" class="w-full h-32 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-3 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
+                            Toàn văn phát biểu của Trưởng đoàn Việt Nam tại Hội nghị COP29 về biến đổi khí hậu
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-2">23/06/2025</div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Sáng ngày 20/11/2024 (giờ địa phương), Thứ trưởng Bộ Tài nguyên và Môi trường Lê Công Thành - Trưởng đoàn Việt Nam tại Hội nghị lần thứ 29 các Bên tham gia Công ước Khung của Liên hợp quốc về Biến đổi khí hậu (COP 29) đã có bài phát biểu quan trọng tại Phiên họp cấp cao.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination Section -->
+        <div class="flex justify-center mt-12">
+            <nav class="flex items-center space-x-2">
+                <button class="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md">1</button>
+                <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">2</button>
+                <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">3</button>
+                <span class="px-3 py-2 text-sm font-medium text-gray-500">...</span>
+                <button class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </nav>
+        </div>
+    </div>
+
+ <!-- Footer -->
+ <footer class="bg-[#2086d7] text-white pt-6 pb-2">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <!-- Logo lớn bên trái -->
+        <div class="flex flex-col items-center md:items-start">
+          <img src="C:\Users\PC\Desktop\Cbit\assets\index assests\Logo White.png" alt="DCC" class="w-40 h-40 object-contain mb-2" />
+        </div>
+        <!-- Thông tin liên hệ ở giữa -->
+        <div class="flex flex-col items-center md:items-start">
+          <h2 class="font-bold text-base md:text-lg mb-2 text-center md:text-left">MINH BẠCH TĂNG CƯỜNG CỦA THỎA THUẬN PARIS VỀ BIẾN ĐỔI KHÍ HẬU</h2>
+          <p class="text-xs md:text-sm">Địa chỉ: Số 10, đường Tôn Thất Thuyết, quận Nam Từ Liêm, Thành phố Hà Nội</p>
+          <p class="text-xs md:text-sm">Điện thoại: 024 37759430 - 024 37759431</p>
+          <p class="text-xs md:text-sm">Email: Info@dcc.gov.vn</p>
+          <p class="text-xs md:text-sm">Website: www.dcc.gov.vn</p>
+          <div class="flex items-center mt-3">
+            <span class="font-semibold mr-2">LIÊN KẾT:</span>
+            <a href="#" class="mx-1"><img src="C:\Users\PC\Desktop\Cbit\assets\index assests\Group 491.png" alt="Facebook" class="w-8 h-8 inline-block" /></a>
+            <a href="#" class="mx-1"><img src="C:\Users\PC\Desktop\Cbit\assets\index assests\youtube 4.png" alt="YouTube" class="w-8 h-8 inline-block" /></a>
+          </div>
+        </div>
+        <!-- Menu liên kết bên phải -->
+        <div class="grid grid-cols-2 gap-4 w-full md:w-auto mt-6 md:mt-0">
+          <div class="space-y-1">
+            <a href="about.html" class="block text-sm hover:underline">Giới thiệu</a>
+            <a href="news.html" class="block text-sm hover:underline">Tin tức</a>
+            <a href="activities.html" class="block text-sm hover:underline">Hoạt động</a>
+            <a href="documents.html" class="block text-sm hover:underline">Văn bản</a>
+          </div>
+          <div class="space-y-1">
+            <a href="documents.html" class="block text-sm hover:underline">Tài liệu</a>
+            <a href="video-library.html" class="block text-sm hover:underline">Thư viện</a>
+            <a href="events.html" class="block text-sm hover:underline">Sự kiện</a>
+            <a href="contact.html" class="block text-sm hover:underline">Liên hệ</a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 border-blue-300 opacity-60" />
+      <div class="text-center text-xs opacity-90 pb-2">© 2025 Bản quyền thuộc Cục Biến đổi khí hậu</div>
+    </div>
+  </footer>
+  
+
+    <!-- JavaScript File -->
+    <script src="../js/news.js"></script>
+    <script src="../js/search-bar.js"></script>
+</body>
+</html>
